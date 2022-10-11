@@ -1,0 +1,45 @@
+Need to create a scanner class that accepts string values
+Print or println statements that prompts user for needed values
+Constructor that accepts those two parameters
+Method that extracts the two integers inside of the string given
+Methods that calculate distance, slope, Y-value
+
+LinearEquation class
+
+Instance Variables:
+    private int x1 - represents 1st x-coordinate
+    private int x2 - represents 2nd x-coordinate
+    private int y1 - represents 1st y-coordinate
+    private int y2 - represents 2nd y-coordinate
+    private double m - represents the slope of the line
+    private double b - represents the y-intercept / how much is added onto mx.
+    private double d - represents the distance between coordinate 1 and coordinate 2
+    private String equation - represents the equation that represents the line of the graph/points (mx +b)
+
+Constructor
+    public LinearEquation(int x1, int y1, int x2, int y2) -accepts the x and y-coordinate (4 parameters)
+
+Methods Created/Used
+    public String toString() (Will display the information needed(First pair, second pair, slope, y-intercept,
+    slope-intersect form, distance) (Created)
+    public int calculateSlope() (Using the two coordinates points, will find and return slope to the nearest
+        hundredth using variable m) (Created)
+    public double calculateDistance() (Will use distance formula with the two coordinates to return distance to the
+        nearest hundredth using variable d) (Created)
+    public double calculateY() (Given the x-coordinate, will use the equation to find y value and return (x,y) (Created)
+    IndexOf(,) (Will find the comma that separates the two coordinates)
+    length() (Will find the length of string given)
+    substring(int from, int to) (Will extract each integer by using the index of the comma has a start/end
+
+
+
+Step 1: Ask user to enter the first coordinate point
+Step 2: Ask user to enter the second coordinate point
+Step 3: Initialize variables x1, x2, y1, y2 to their respected values
+Step 4: Create a LinearEquation object using the variables
+Step 5: Use the method .calculateDistance to find distance and initialize variable d to value
+Step 6: Use the method .calculateSlope to find slope and initialize variable m to value
+Step 7: Initialize variable equation using slope and y-intercept
+Step 8: Use toString() method to print out following information (First pair, second pair, slope, y-intercept slope-intersect form, distance)
+Step 9 Ask user to enter a x-value
+Step 10: Use .calculateY to return (x,y) inside of a print statement
