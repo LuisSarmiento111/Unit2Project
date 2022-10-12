@@ -15,7 +15,7 @@ public class LinearEquation {
         this.y2 = y2;
     }
 
-    public int calculateSlope(){
+    public int calculateSlope(){   // make it double but print as int
         m = (y2 - y1) / (x2 -x1);
         return m;
     }
@@ -35,8 +35,11 @@ public class LinearEquation {
         return b;
     }
 
-    public String slopeIntersectForm(){   // Make it print the equation as a fraction and not a decimal and for negative y-intersect
-        equation = m + ("x + ") + (double) b;
+    public String slopeIntersectForm(){   // Make it print the equation as a fraction and not a decimal
+        if (b < 0)
+            equation =  equation = m + ("x - ") + Math.abs((double) b); // if b is negative, will change the "+" to a "-"
+        else
+            equation = m + ("x + ") + (double) b; // if b is not negative, will use the normal y = mx + b format
         return equation;
     }
 
@@ -47,5 +50,7 @@ public class LinearEquation {
         return s;
     }
 
-
+    public double calculateY(int x){
+        return m * x + b;
+    }
 }

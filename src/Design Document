@@ -27,6 +27,7 @@ Methods Created/Used
     public double calculateDistance() (Will use distance formula with the two coordinates to return distance to the
         nearest hundredth using variable d) (Created)
     public double calculateIntersect() (Will use the equation to calculate what y would be at x = 0.) (Created)
+    public String slopeIntersectForm() (Will create an equation in y = mx + b form)
     public double calculateY() (Given the x-coordinate, will use the equation to find y value and return (x,y) (Created)
     IndexOf(,) (Will find the comma that separates the two coordinates)
     length() (Will find the length of string given)
