@@ -11,10 +11,11 @@ public class EquationRunner {
         String secondCoordinate = myObj.nextLine();
         int comma2 = secondCoordinate.indexOf(",");
         int x2 = Integer.valueOf(secondCoordinate.substring(1,comma2));
-        int y2 = Integer.valueOf(secondCoordinate.substring(comma2 +1,firstCoordinate.length()-1));
+        int y2 = Integer.valueOf(secondCoordinate.substring(comma2 +1,secondCoordinate.length()-1));
         LinearEquation taco = new LinearEquation(x1,y1,x2,y2);
         System.out.println(taco.toString());
-        System.out.println("Enter an x-value: ");
+        System.out.print("Enter an x-value: ");
+        System.out.println(taco.calculateY(myObj.nextDouble()));
 
 
     }
