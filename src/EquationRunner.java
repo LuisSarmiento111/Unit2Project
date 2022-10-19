@@ -12,10 +12,10 @@ public class EquationRunner {
         int comma2 = secondCoordinate.indexOf(",");
         int x2 = Integer.valueOf(secondCoordinate.substring(1,comma2));
         int y2 = Integer.valueOf(secondCoordinate.substring(comma2 +1,secondCoordinate.length()-1));
-        LinearEquation taco = new LinearEquation(x1,y1,x2,y2);
-        System.out.println(taco.toString());
+        LinearEquation myEquation = new LinearEquation(x1,y1,x2,y2);
+        System.out.println(myEquation.toString());
         System.out.print("Enter an x-value: ");
-        System.out.println(taco.calculateY(myObj.nextDouble()));
+        System.out.println(myEquation.calculateY(myObj.nextDouble()));
 
 
     }
