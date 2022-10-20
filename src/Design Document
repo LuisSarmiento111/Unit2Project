@@ -13,15 +13,16 @@ Instance Variables:
     private int y2 - represents 2nd y-coordinate
     private double m - represents the slope of the line
     private double b - represents the y-intercept / how much is added onto mx.
-    private double d - represents the distance between coordinate 1 and coordinate 2
+    private double distance - represents the distance between coordinate 1 and coordinate 2
     private String equation - represents the equation that represents the line of the graph/points (mx +b)
 
+
 Constructor
-    public LinearEquation(int x1, int y1, int x2, int y2) -accepts the x and y-coordinate (4 parameters)
+    public LinearEquation(int x1, int y1, int x2, int y2) inserts the x and y-coordinates (4 parameters as integers)
 
 Methods Created/Used
     public String toString() (Will display the information needed(First pair, second pair, slope, y-intercept,
-    slope-intersect form, distance) (Created)
+        slope-intersect form, distance) (Created)
     public int calculateSlope() (Using the two coordinates points, will find and return slope to the nearest
         hundredth using variable m) (Created)
     public double calculateDistance() (Will use distance formula with the two coordinates to return distance to the
@@ -29,19 +30,28 @@ Methods Created/Used
     public double calculateIntersect() (Will use the equation to calculate what y would be at x = 0.) (Created)
     public String slopeIntersectForm() (Will create an equation in y = mx + b form)
     public double calculateY() (Given the x-coordinate, will use the equation to find y value and return (x,y) (Created)
+    public int findGCD(int n1, int n2) (Given the numerator (n1) and denominator (n2) of a fraction, will
+        calculate its gcd) (Created)
+    public String decimalToFraction() (Will convert a decimal, assuming it's in the hundredths place, to a
+        fraction in form of a string) (Created)
     IndexOf(,) (Will find the comma that separates the two coordinates)
     length() (Will find the length of string given)
-    substring(int from, int to) (Will extract each integer by using the index of the comma has a start/end
+    substring(int from, int to) (Will extract each integer by using the index of the comma has a start/end)
 
 
-
-Step 1: Ask user to enter the first coordinate point
-Step 2: Ask user to enter the second coordinate point
-Step 3: Initialize variables x1, x2, y1, y2 to their respected values
-Step 4: Create a LinearEquation object using the variables
-Step 5: Use the method .calculateDistance to find distance and initialize variable d to value
-Step 6: Use the method .calculateSlope to find slope and initialize variable m to value
-Step 7: Initialize variable equation using slope and y-intercept
-Step 8: Use toString() method to print out following information (First pair, second pair, slope, y-intercept slope-intersect form, distance)
-Step 9 Ask user to enter a x-value
-Step 10: Use .calculateY to return (x,y) inside of a print statement
+Step 1: Create a new scanner class called myObj.
+Step 2: Ask user to enter the first coordinate point.
+Step 3: Put user input into a string variable called firstCoordinate.
+Step 4: Find the index of the comma inside of the firstCoordinate variable and initialize it into comma.
+Step 5: With comma, use substring method to take out the x-value from firstCoordinate and initialize it into x1.
+Step 6: With comma, use substring method to take out the y-value from firstCoordinate and initialize it into y1.
+Step 7: Ask user to enter the second coordinate point
+Step 8: Put user input into a string variable called secondCoordinate
+Step 9: Find the index of the comma inside of the firstCoordinate variable and initialize it into comma2.
+Step 10: With comma2, use substring method to take out the x-value from secondCoordinate and initialize it into x2.
+Step 11: With comma2, Use substring method to take out the y-value from secondCoordinate and initialize it into y2.
+Step 12: Create a LinearEquation object using the four variables as inputs
+Step 13: Use the method toString() to inside of a print statement in order to print the needed information of the line.
+    toString() should use the other methods in order to find needed information and put it into a single string.
+Step 14: Ask user to enter a x-value
+Step 15: Use .calculateY, inside of a print statement, to calculate y-value and print out (x,y) as a string.

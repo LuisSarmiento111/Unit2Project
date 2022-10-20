@@ -56,7 +56,7 @@ public class LinearEquation {
         int gcd = findGCD(Math.abs(numerator),denominator); // uses GCD method to assign gcd a value
         numerator = numerator / gcd; // simplifies numerator
         denominator = denominator / gcd; // simplifies denominator
-        return numerator + "/" + denominator; // returns the divided values in string form to represent a fraction
+        return numerator + "/" + denominator; // 
     }
     public String slopeIntersectForm() { // method for returning the equation of the line in slope-intersect form
         if (b < 0) {  // if y-intersect is negative, will have equation have a "-" for y-intercept

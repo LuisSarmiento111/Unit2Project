@@ -16,7 +16,5 @@ public class EquationRunner {
         System.out.println(myEquation.toString()); // prints the information of the linear equation
         System.out.print("Enter an x-value: "); // asks user to put in an x-value
         System.out.println(myEquation.calculateY(myObj.nextDouble())); // prints the coordinate of that x-value
-
-
     }
 }
