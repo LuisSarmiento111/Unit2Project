@@ -21,8 +21,8 @@ public class LinearEquation {
     }
 
     public double calculateDistance() { // method for calculating the distance using the formula and returns it to hundredths place
-        distance = Math.sqrt(Math.pow(x2 - x1,2) + Math.pow(y2-y1,2));
-        return Math.round(distance * 100.0) / 100.0;
+        distance = Math.round(Math.sqrt(Math.pow(x2 - x1,2) + Math.pow(y2-y1,2)) * 100) / 100.0;
+        return distance;
     }
 
     public double calculateIntersect() { // method for calculating the y-intersect using the slope and returns it
@@ -78,6 +78,9 @@ public class LinearEquation {
     }
 
     public String calculateY(double x) { // Given an x-value, it will return the coordinate of that value according to the linear equation.
-        return "Solved coordinate point is: (" + x + ", " + (m * x + b) + ")"; // uses mx + b to find y and puts it into coordinate
+        System.out.println(m);
+        System.out.println(x);
+        System.out.println(b);
+        return "Solved coordinate point is: (" + x + ", " + (double) Math.round(((m * x + b)* 100.0) / 100.0) + ")"; // uses mx + b to find y and puts it into coordinate
     }
 }
